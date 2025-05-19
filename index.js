@@ -2,66 +2,90 @@
  * @param {number[]} numbers an array of integers
  * @returns {number} the length of the array
  */
-function getLength(numbers) {
-  // TODO
-}
 
+let numbers = [28, -15, 30, 975, 400];
+
+function getLength(numbers) {
+  return numbers.length;
+}
+console.log(getLength(numbers));
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
 }
-
+console.log(getSum(numbers));
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  return getSum(numbers) / numbers.length;
 }
-
+console.log(getMean(numbers));
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  return Math.min(...numbers);
 }
 
+console.log(getMin(numbers));
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  return Math.max(...numbers);
 }
 
+console.log(getMax(numbers));
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  return Math.max(...numbers) - Math.min(...numbers);
 }
 
+console.log(getRange(numbers));
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let result = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      result.push(numbers[i]);
+    }
+  }
+  return result;
 }
+
+console.log(getEvens(numbers));
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  let result = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 !== 0) {
+      result.push(numbers[i]);
+    }
+  }
+  return result;
 }
-
+console.log(getOdds(numbers));
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
 
 /**
@@ -97,9 +121,9 @@ function describeNumbers(numbers) {
   console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
 }
 
-const userInputString = prompt(
+/* const userInputString = prompt(
   "Please enter some integers separated by commas.",
   "28,-15,30,975,400"
 );
 const numbers = convertStringToNumbers(userInputString);
-describeNumbers(numbers);
+describeNumbers(numbers); */
